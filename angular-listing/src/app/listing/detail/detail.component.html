@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card" *ngIf="listing">
+    <div class="card-block">
+      <h2 class="card-title">{{ listing.title }}</h2>
+      <p>Published {{ listing.date_modified }} by {{ listing.author }}</p>
+      <h4>Summary</h4>
+      <p class="card-text">{{ listing.description }}</p>
+      <p class="card-text">
+        {{ listing.text }}
+      </p>
+      <button [routerLink]="['/edit', listing.id]" class="btn btn-primary"><span class="fa fa-pencil-square-o"></span> Edit Article</button>
+      <button (click)="deleteListing(listing.id)" class="btn btn-danger"><span class="fa fa-times-circle"></span> Delete Article</button>
+    </div>
+  </div>
+</div>

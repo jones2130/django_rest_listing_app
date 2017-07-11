@@ -1,0 +1,15 @@
+<div class="container">
+  <div *ngIf="!listings || listings.length == 0" class="jumbotron">
+    <h1>No articles found. Create an article to view.</h1>
+    <a routerLink="/create" class="btn btn-success"><span class="fa fa-plus-circle"></span> Create New Article</a>
+  </div>
+
+  <div class="card" *ngFor="let listing of listings">
+    <div class="card-block">
+      <h4 class="card-title">{{ listing.title }}</h4>
+      <p>Published {{ listing.date_modified }} by {{ listing.author }}</p>
+      <p class="card-text">{{ listing.description }}</p>
+      <button [routerLink]="['/details', listing.id]" class="btn btn-primary">Read Article</button>
+    </div>
+  </div>
+</div>

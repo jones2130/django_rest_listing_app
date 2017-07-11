@@ -1,0 +1,23 @@
+<div *ngIf="listing" class="container">
+  <form [formGroup]="editForm" novalidate (ngSubmit)="save(editForm.value, editForm.valid)">
+    <div class="form-group row">
+      <label class="col-md-2" for="title">* Title</label>
+      <input formControlName="title" type="text" class="col-md-10 form-control" id="title" placeholder="Example input" />
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2" for="author">Author</label>
+      <input formControlName="author" type="text" class="col-md-10 form-control" id="author" placeholder="Another input" />
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2" for="description">description</label>
+      <textarea formControlName="description" class="col-md-10 form-control" id="description" placeholder="Example input"></textarea>
+    </div>
+    <div class="form-group row">
+      <label class="col-md-2" for="text">* Article Text</label>
+      <textarea formControlName="text" class="col-md-10 form-control" id="text" placeholder="Another input"></textarea>
+    </div>
+    <div class="row">
+      <button class="col-lg-2 btn btn-success" type="submit">Create Listing</button>
+    </div>
+  </form>
+</div>
