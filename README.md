@@ -16,9 +16,11 @@ pytz==2017.2
 
 To run the django server run the following commands
 
-`$ pip install -r requirements.txt`
-`$ ./manage.py migrate`
-`$ ./manage.py runserver`
+```
+$ pip install -r requirements.txt
+$ ./manage.py migrate
+$ ./manage.py runserver
+```
 
 Navigate to http://localhost:8000 to view the app.
 
