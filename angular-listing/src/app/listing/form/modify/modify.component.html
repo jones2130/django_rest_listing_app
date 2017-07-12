@@ -1,7 +1,9 @@
 <div *ngIf="listing" class="container">
+  <h3>Edit Article</h3>
+
   <form [formGroup]="editForm" novalidate (ngSubmit)="save(editForm.value, editForm.valid)">
     <div class="form-group row">
-      <label class="col-md-2" for="title">* Title</label>
+      <label class="col-md-2" for="title"><span class="required">*</span> Title</label>
       <input formControlName="title" type="text" class="col-md-10 form-control" id="title" placeholder="Example input" />
     </div>
     <div class="form-group row">
@@ -13,7 +15,7 @@
       <textarea formControlName="description" class="col-md-10 form-control" id="description" placeholder="Example input"></textarea>
     </div>
     <div class="form-group row">
-      <label class="col-md-2" for="text">* Article Text</label>
+      <label class="col-md-2" for="text"><span class="required">*</span> Article Text</label>
       <textarea formControlName="text" class="col-md-10 form-control" id="text" placeholder="Another input"></textarea>
     </div>
     <div class="row">
