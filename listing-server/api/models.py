@@ -15,5 +15,7 @@ class Listing(models.Model):
     related_name = 'listing'
     on_delete = models.CASCADE
 
+    class Meta:
+        ordering = ('-date_modified',)
     def __str__(self):
         return '{}'.format(self.title)
